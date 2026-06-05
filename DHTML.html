@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DHTML Demo</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: white;
+        }
+
+        h1 {
+            color: darkblue;
+            transition: 0.3s;
+        }
+
+        p {
+            font-size: 20px;
+            color: black;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="heading"
+        onmouseover="mouseOverEffect()"
+        onmouseout="mouseOutEffect()">
+        Welcome to DHTML
+    </h1>
+
+    <p id="para">
+        This is a simple paragraph.
+    </p>
+
+    <button onclick="changeContent()">
+        Click Me
+    </button>
+
+    <script>
+        function changeContent() {
+
+            // Change background color
+            document.body.style.backgroundColor = "lightyellow";
+
+            // Change paragraph text
+            document.getElementById("para").innerHTML =
+                "Paragraph changed dynamically using JavaScript!";
+
+            // Change font style
+            document.getElementById("para").style.color = "red";
+            document.getElementById("para").style.fontStyle = "italic";
+            document.getElementById("para").style.fontSize = "24px";
+        }
+
+        function mouseOverEffect() {
+            document.getElementById("heading").style.color = "green";
+            document.getElementById("heading").style.fontSize = "40px";
+        }
+
+        function mouseOutEffect() {
+            document.getElementById("heading").style.color = "darkblue";
+            document.getElementById("heading").style.fontSize = "32px";
+        }
+    </script>
+
+</body>
+</html>
